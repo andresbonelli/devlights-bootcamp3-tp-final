@@ -1,3 +1,14 @@
+# Arquitectura General
+**Frontend:** React + Next.js (SSR, CSR, y SEO amigable)
+**Backend:** Node.js + Express (API REST)
+**Base de Datos:** MongoDB Atlas (NoSQL)
+**Autenticación y Autorización:** JWT + OAuth2 (Login con Google, Facebook, etc.)
+**Almacenamiento de Archivos:** AWS S3 / Cloudinary (para imágenes de productos)
+**Procesamiento de Pagos:** Stripe / Mercado Pago
+**Mensajería y Notificaciones:** Nodemailer para correos y WebSockets para mensajes en tiempo real
+**Deploy:** Vercel para frontend y Render/Heroku para backend (o AWS / GCP)
+**Gestión de tareas:** Trello / GitHub Projects
+
 
 # Componentes de la Aplicación y Tecnologías Asociadas
 ## 1. Autenticación y Usuarios
