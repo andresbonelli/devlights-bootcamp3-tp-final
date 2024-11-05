@@ -3,19 +3,58 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #fafafa;
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #171717;
+    --foreground: #fafafa;
   }
-}
+} */
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "SF Pro", Arial, Helvetica, sans-serif;
+}
+
+.font-regular {
+  font-family: var(--font-sf-pro-regular);
+}
+
+.font-medium {
+  font-family: var(--font-sf-pro-medium);
+}
+
+.font-bold {
+  font-family: var(--font-sf-pro-bold);
+}
+
+.font-semibold-italic {
+  font-family: var(--font-sf-pro-semibold-italic);
+}
+
+.font-heavy-italic {
+  font-family: var(--font-sf-pro-heavy-italic);
+}
+
+.font-light-italic {
+  font-family: var(--font-sf-pro-light-italic);
+}
+.font-ultralight-italic {
+  font-family: var(--font-sf-pro-ultralight-italic);
+}
+.font-black-italic {
+  font-family: var(--font-sf-pro-black-italic);
+}
+.font-thin-italic {
+  font-family: var(--font-sf-pro-thin-italic);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
 }

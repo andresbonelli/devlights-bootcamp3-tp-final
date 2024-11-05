@@ -46,7 +46,7 @@ const sfProBlackItalic = localFont({
 
 const sfProThinItalic = localFont({
   src: "../../public/fonts/sf-pro-font/SFPRODISPLAYTHINITALIC.otf",
-  variable: "--font-sf-pro-thin",
+  variable: "--font-sf-pro-thin-italic",
   weight: "100 900",
 });
 
