@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { SessionProvider } from "next-auth/react";
+import { auth } from "@/auth";
 import "./globals.css";
 
 const sfProRegular = localFont({
@@ -111,11 +113,12 @@ export const metadata: Metadata = {
   description: "TP final grupal - grupo 1",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const session = await auth();
   return (
     <html lang="en">
       <body
@@ -140,7 +143,7 @@ export default function RootLayout({
       ${sfProUltralightItalic.variable}
       antialiased`}
       >
-        {children}
+        <SessionProvider session={session}>{children}</SessionProvider>
       </body>
     </html>
   );
