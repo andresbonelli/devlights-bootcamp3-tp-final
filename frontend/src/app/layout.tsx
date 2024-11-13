@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { SessionProvider } from "next-auth/react";
 import { auth } from "@/auth";
 import "./globals.css";
+import Header from "@/components/header";
 
 const sfProRegular = localFont({
   src: "../../public/fonts/sf-pro-font/SF-Pro-Display-Regular.otf",
@@ -123,27 +124,30 @@ export default async function RootLayout({
     <html lang="en">
       <body
         className={`
-      ${sfProRegular.variable}
-      ${sfProRegularItalic.variable}
-      ${sfProBlack.variable}
-      ${sfProBlackItalic.variable}
-      ${sfProBold.variable}
-      ${sfProBoldItalic.variable}
-      ${sfProHeavy.variable}
-      ${sfProHeavyItalic.variable}
-      ${sfProLight.variable}
-      ${sfProLightItalic.variable}
-      ${sfProMedium.variable}
-      ${sfProMediumItalic.variable}
-      ${sfProSemibold.variable}
-      ${sfProSemiboldItalic.variable}
-      ${sfProThin.variable}
-      ${sfProThinItalic.variable}
-      ${sfProUltralight.variable}
-      ${sfProUltralightItalic.variable}
-      antialiased`}
+          ${sfProRegular.variable}
+          ${sfProRegularItalic.variable}
+          ${sfProBlack.variable}
+          ${sfProBlackItalic.variable}
+          ${sfProBold.variable}
+          ${sfProBoldItalic.variable}
+          ${sfProHeavy.variable}
+          ${sfProHeavyItalic.variable}
+          ${sfProLight.variable}
+          ${sfProLightItalic.variable}
+          ${sfProMedium.variable}
+          ${sfProMediumItalic.variable}
+          ${sfProSemibold.variable}
+          ${sfProSemiboldItalic.variable}
+          ${sfProThin.variable}
+          ${sfProThinItalic.variable}
+          ${sfProUltralight.variable}
+          ${sfProUltralightItalic.variable}
+          antialiased`}
       >
-        <SessionProvider session={session}>{children}</SessionProvider>
+        <SessionProvider session={session}>
+          <Header />
+          {children}
+        </SessionProvider>
       </body>
     </html>
   );
