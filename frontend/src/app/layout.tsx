@@ -4,6 +4,7 @@ import { SessionProvider } from "next-auth/react";
 import { auth } from "@/auth";
 import "./globals.css";
 import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 const sfProRegular = localFont({
   src: "../../public/fonts/sf-pro-font/SF-Pro-Display-Regular.otf",
@@ -147,6 +148,7 @@ export default async function RootLayout({
         <SessionProvider session={session}>
           <Header />
           {children}
+          <Footer />
         </SessionProvider>
       </body>
     </html>

@@ -8,17 +8,8 @@ export default async function Header() {
   const user: UserFromDB | null = session?.user ?? null;
   console.log(session, " SESSION");
   return (
-    <header className="fixed top-0 w-full z-50">
-      <nav
-        className="
-                    w-full h-16 
-                    flex flex-row
-                    justify-center place-items-center 
-                    gap-5 
-                    font-light text-sm
-                    shadow-lg
-                   "
-      >
+    <header>
+      <nav>
         <Link href="/">HOME</Link>
         <h1>List</h1>
         <h1>List</h1>
