@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default async function Home() {
   return (
-    <main>
+    <main className="home">
       <section>
         <h1 className="section-title">Welcome to our Store</h1>
         <div className="section-content">

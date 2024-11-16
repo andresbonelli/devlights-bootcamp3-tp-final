@@ -110,16 +110,32 @@ body {
   }
 
   main {
-    @apply mt-16 flex flex-col justify-start pl-5 md:pl-32 pb-10;
+    @apply mt-16;
+  }
+
+  main.home {
+    @apply flex flex-col justify-start pl-5 md:pl-32 pb-10;
+  }
+
+  main.access {
+    @apply flex flex-col justify-start items-center px-5 md:px-32;
   }
 
   section {
     @apply flex flex-col justify-center items-center;
   }
+  section.access {
+    @apply sm:w-1/2;
+  }
   .section-title {
     @apply w-full text-3xl sm:text-4xl md:text-5xl text-left
            font-semibold text-gray-500 py-10 sm:py-28;
   }
+
+  .section-title.secondary {
+    @apply font-semibold text-black py-10 sm:py-24 sm:text-4xl;
+  }
+
   .section-subtitle {
     @apply w-full text-2xl md:text-3xl text-left
            font-semibold text-gray-500 pt-5 pb-2;
