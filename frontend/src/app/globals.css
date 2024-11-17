@@ -23,67 +23,6 @@ body {
   font-family: "SF Pro", Arial, Helvetica, sans-serif;
 }
 
-.font-regular {
-  font-family: var(--font-sf-pro-regular);
-}
-.font-regular-italic {
-  font-family: var(--font-sf-pro-regular-italic);
-}
-
-.font-medium {
-  font-family: var(--font-sf-pro-medium);
-}
-
-.font-medium-italic {
-  font-family: var(--font-sf-pro-medium-italic);
-}
-
-.font-bold {
-  font-family: var(--font-sf-pro-bold);
-}
-.font-bold-italic {
-  font-family: var(--font-sf-pro-bold-italic);
-}
-
-.font-semibold {
-  font-family: var(--font-sf-pro-semibold);
-}
-.font-semibold-italic {
-  font-family: var(--font-sf-pro-semibold-italic);
-}
-
-.font-heavy {
-  font-family: var(--font-sf-pro-heavy);
-}
-.font-heavy-italic {
-  font-family: var(--font-sf-pro-heavy-italic);
-}
-
-.font-light {
-  font-family: var(--font-sf-pro-light);
-}
-.font-light-italic {
-  font-family: var(--font-sf-pro-light-italic);
-}
-.font-ultralight {
-  font-family: var(--font-sf-pro-ultralight);
-}
-.font-ultralight-italic {
-  font-family: var(--font-sf-pro-ultralight-italic);
-}
-.font-black {
-  font-family: var(--font-sf-pro-black);
-}
-.font-black-italic {
-  font-family: var(--font-sf-pro-black-italic);
-}
-.font-thin {
-  font-family: var(--font-sf-pro-thin);
-}
-.font-thin-italic {
-  font-family: var(--font-sf-pro-thin-italic);
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -92,9 +31,9 @@ body {
 
 @layer components {
   header {
-    @apply fixed top-0 w-full z-50 bg-background shadow-lg;
+    @apply w-full z-50 bg-background shadow-2xl shadow-blue-200;
     nav {
-      @apply w-full h-16 flex flex-row justify-center place-items-center
+      @apply w-full h-12 flex flex-row justify-center place-items-center
              gap-5 font-light text-sm;
     }
   }
@@ -110,11 +49,11 @@ body {
   }
 
   main {
-    @apply mt-16;
+    @apply font-medium;
   }
 
   main.home {
-    @apply flex flex-col justify-start pl-5 md:pl-32 pb-10;
+    @apply flex flex-col justify-start pl-5 md:pl-32 pb-10 gap-5;
   }
 
   main.access {
@@ -138,7 +77,7 @@ body {
 
   .section-subtitle {
     @apply w-full text-2xl md:text-3xl text-left
-           font-semibold text-gray-500 pt-5 pb-2;
+           font-semibold text-gray-500 py-5;
   }
   .section-content {
     @apply w-full flex flex-col justify-between items-center gap-5;
@@ -162,8 +101,9 @@ body {
   /* Products */
   .product-card-container {
     @apply w-full flex flex-row justify-start items-center
-    pb-12 pt-3 px-3 gap-5
-    overflow-x-scroll overflow-y-visible;
+    gap-5
+    transition-transform duration-300
+    overflow-scroll sm:overflow-visible;
   }
   .product-card {
     @apply h-[450px] w-[250px] sm:w-[300px] 
@@ -186,4 +126,6 @@ body {
     @apply h-[450px] w-[300px] sm:w-[450px] 
            bg-gray-200;
   }
+
+  /* Buttons */
 }
